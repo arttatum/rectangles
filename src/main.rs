@@ -1,3 +1,4 @@
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
@@ -13,6 +14,10 @@ fn main() {
         "The area of the rectangle is {} square pixels.",
         area(&rect1)
     );
+
+    // we need our struct to have the attribute #[derive(Debug)] to use these notations
+    println!("rect1 is {:?}", rect1);
+    println!("rect1 is {:#?}", rect1);
 }
 
 fn area(rectangle: &Rectangle) -> u32 {
